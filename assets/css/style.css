@@ -81,6 +81,18 @@ ul li a:hover{
   border: black;
   border-style: solid;
 }
+
+.AboutMe button{
+  height: 50px;
+  width: 600px;
+  border-style: solid;
+  border-width: 3px;
+  display: block;
+  padding: 5px;
+  margin: 10px;
+  background-color: lightgray;
+  
+}
 /*main content block with border*/
 
 .MyWork {
@@ -88,8 +100,6 @@ ul li a:hover{
   padding: 10px;
   height: auto;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #0072bb;
-  color: #ffffff;
   display:flex;
   border: black;
   border-style: solid;
@@ -102,6 +112,8 @@ ul li a:hover{
   display: inline-block;
   max-width: 25%;
   height:auto;
+  min-height: 400px;
+  min-width: 300px;
 }
 /*my img info*/
 
