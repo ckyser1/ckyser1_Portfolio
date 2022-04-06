@@ -1,0 +1,429 @@
+/* Defining some common repeating variables that will be used throughout the project. */
+
+:root {
+  --primaryColor: #f9fafb;
+  --secondaryColor: #202121;
+  --ternaryColor: #efefef;
+  --quaternaryColor: #bcbcbc;
+  --bodyCopyFontStyling: 400 12pt/14pt "Lato", sans-serif;
+  --buttonFontStyling: 900 12pt/14pt "Lato", sans-serif;
+  --titleFontStyling: 700 24pt/24pt "Lato", sans-serif;
+  --subTitleFontStyling: 700 18pt/18pt "Lato", sans-serif;
+  --activePrimary: #72c05b;
+  --activeSecondary: #e1ffe1;
+  --badgePrimary: #84d5f7;
+  --badgeSecondary: #f0fcff;
+}
+
+/* Base styling for the body along with a reset for the default margin and padding that is applied through browsers */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  background-color: var(--primaryColor);
+  overflow-x: hidden;
+}
+
+/* Stylization for the main.handlebars begins */
+
+/* Styling for the header section begins. */
+
+header {
+  width: calc(100% - 150px);
+  height: 60px;
+  padding: 20px 75px;
+  background-color: var(--primaryColor);
+  max-width: 1440px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  border-bottom: 1px solid var(--ternaryColor);
+}
+
+header > #logo {
+  width: 200px;
+  display: inline-block;
+}
+
+header > #nav-icon {
+  display: none;
+}
+
+header > nav {
+  width: calc(100% - 235px);
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header > nav .nav-btn {
+  color: var(--secondaryColor);
+  text-decoration: none;
+  margin: 0px 10px;
+  padding: 5px 10px;
+  font: var(--bodyCopyFontStyling);
+  background-color: var(--primaryColor);
+  border-radius: 2px;
+  transition: 250ms linear;
+  text-transform: uppercase;
+  border: none;
+  display: inline-block;
+}
+
+header > nav .nav-btn:hover {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  transition: 250ms linear;
+}
+
+/* Stylization for the header section ends. */
+
+/* Some simple widths attributes added to the main section of the page */
+
+main {
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+/* Stylization for the footer section begins */
+
+footer {
+  width: 100%;
+  background-color: var(--primaryColor);
+  border-top: 1px solid var(--ternaryColor);
+}
+
+footer > h6 {
+  width: 100%;
+  font: var(--bodyCopyFontStyling);
+  text-align: center;
+  padding: 25px 0px 0px 0px;
+}
+
+footer > ul {
+  width: 100%;
+  display: block;
+  margin: 10px auto;
+  max-width: 1440px;
+  text-align: center;
+}
+
+footer > ul > li {
+  display: inline-block;
+  margin: 0px 10px;
+  padding: 0px 0px 25px 0px;
+  font: var(--bodyCopyFontStyling);
+  color: var(--secondaryColor);
+}
+
+footer > ul > li > a {
+  color: var(--secondaryColor);
+}
+
+#hero-section {
+  width: 100%;
+  height: calc(70vh - 100px);
+  background-image: url(./images/UF_RO\ Interior_Low\ Resolution.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 35px;
+}
+
+#hero-section > h1,
+#hero-section > h2 {
+  max-width: calc(1440px * 0.75);
+  margin: 0px auto;
+  padding: 5px;
+  text-align: center;
+  font: var(--titleFontStyling);
+  color: var(--secondaryColor);
+  background-color: var(--primaryColor);
+  border-radius: 10px;
+}
+
+#hero-section > h1 {
+  font-size: 30pt;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+#hero-section > h2 {
+  font-style: italic;
+  font-weight: 400;
+}
+
+#aboutme {
+  width: 100%;
+  height: calc(75vh - 100px);
+  background-image: url(./images/herome.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 35px;
+}
+
+.aboutbutton{
+  height: 50px;
+  width: 98%;
+  border-style: solid;
+  border-width: 3px;
+  display: block;
+  padding: 5px;
+  margin: 10px;
+  background-color: lightgray;
+  
+}
+#softwork{
+  margin-left:10px;
+}
+
+#bumpimg {
+  width: 50%;
+  height: 350px;
+}
+
+#mechwork{
+  margin-left:10px;
+}
+
+#mechimg {
+  width: 75%;
+  height: 350px;
+}
+
+
+/* Media queries begin. */
+
+@media screen and (max-width: 1000px) {
+  header {
+    display: flex;
+    flex-flow: column;
+    height: auto;
+  }
+
+  header > nav {
+    width: auto;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    display: flex;
+  }
+
+  #profile-container {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    gap: 25px;
+  }
+
+  #profile-container > img {
+    width: 250px;
+    margin: 0px auto;
+  }
+
+  #profile-container > #profile-details {
+    width: 100%;
+    padding: 0px;
+  }
+
+  #profile-container > #profile-details > #health-status {
+    margin: 0px auto 15px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main {
+    padding-top: 100px;
+  }
+
+  header {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding: 25px 0px 10px;
+    overflow: hidden;
+    z-index: 10;
+    transition: 400ms ease-in-out;
+  }
+
+  header.closed {
+    height: 60px;
+    background-color: var(--primaryColor);
+  }
+
+  header.open {
+    height: 100vh;
+    background-color: var(--ternaryColor);
+  }
+
+  header > #logo {
+    position: absolute;
+    left: calc(50% - 100px);
+  }
+
+  header > #nav-icon {
+    display: inline-block;
+    position: absolute;
+    right: 35px;
+    width: 25px;
+    height: 25px;
+    top: 35px;
+  }
+
+  nav.open {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    height: calc(100vh - 100px);
+    gap: 25px;
+  }
+
+  nav.open > #navigation-links {
+    width: 100%;
+    height: calc(65vh - 100px);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  nav.open > #navigation-links > a {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    border-top: 1px solid var(--secondaryColor);
+    width: 100%;
+    padding: 0px;
+    margin: 0px auto;
+    background-color: var(--ternaryColor);
+  }
+
+  nav.open > #navigation-links > a:hover {
+    background-color: var(--secondaryColor);
+  }
+
+  nav.open > #navigation-links > a:first-of-type {
+    border-top: none;
+  }
+
+  nav.open > #navigation-account {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  nav.open > #navigation-account > a {
+    padding: 25px 0px;
+    width: 100%;
+    text-align: center;
+    margin: 0px auto;
+    background-color: var(--ternaryColor);
+  }
+
+  nav.open > #navigation-account > a:hover {
+    background-color: var(--secondaryColor);
+  }
+
+  #navigation-account > input {
+    width: 85%;
+    margin: 0px auto;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--ternaryColor);
+    color: var(--secondaryColor);
+  }
+
+  #navigation-account > button {
+    width: 100%;
+    padding: 15px;
+    margin: 0px auto;
+    text-align: center;
+    display: block;
+    background-color: var(--ternaryColor);
+    transition: 250ms ease-in-out;
+  }
+
+  #navigation-account > #searchSubmit {
+    width: 100px;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: -39px;
+    padding: 9px 0px;
+    display: block;
+    margin-left: calc(97% - 100px);
+  }
+
+  #navigation-account > button:hover {
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    transition: 250ms ease-in-out;
+  }
+
+  nav.closed {
+    transition-delay: 0ms;
+    height: auto;
+    display: none;
+  }
+  .aboutbutton{
+    height: 50px;
+    width: 50%;
+    border-style: solid;
+    border-width: 3px;
+    display: block;
+    padding: 5px;
+    margin: 10px;
+    background-color: lightgray;
+    
+  }
+  #bumpimg {
+    width: 100%;
+    height: 200px;
+  }
+
+  #mechimg {
+    width: 100%;
+    height: 200px;
+  }
+  #contact{
+    margin-top: 20px;
+
+  }
+  #conmob{
+    margin-top: 100px;
+  }
+}
+
+/* Media queries end. */
